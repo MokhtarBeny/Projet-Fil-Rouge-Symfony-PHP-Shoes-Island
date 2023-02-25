@@ -1,0 +1,64 @@
+{% extends "base.html.twig" %}
+
+{% block title%}
+	Shoes Island Categorie
+
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="container mx-auto mt-4">
+		<div class="row">
+			<h1>Les Catégories</h1>
+			<hr>
+
+			{% for categorie in categorie.sousCategories %}
+				<div class="col-6 border  mt-4">
+
+					<a href="{{ path("Produit", {souscategorie:categorie.id})}}">
+						<center>
+							{{ categorie.SousCategorieNom }}
+						</center>
+						<br>
+						<center><img src="/images/{{categorie.imagesrc}}" alt="categorie" class="img-fluid w-100 imagescategories"></center>
+						<div class="text-center">
+							{{categorie.sousCategorieType}}
+						</div>
+					</a>
+				</div>
+
+			{% endfor %}
+		</div>
+
+	</div>
+
+	<div class="mt-4">
+		<center>
+			<h3>
+				Veuillez cliquer sur une sous-catégorie</h3>
+		</center>
+	</div>
+	<div class="descsouscat mt-4">
+		<ul>
+			<li>
+				<p>A l’origine, la sneaker est une chaussure de sport. La Converse All Star, une des premières sneakers (1917), 
+					            est à l’origine une chaussure de basketball. Sauf qu’elle n’est plus utilisée pour sa fonction première.
+					            En effet, la majorité des modèles conçus pour une pratique sportive ne seront jamais employés pour le fitness, l’athlétisme ou le basketball.
+					            Les chiffres varient un peu d’un spécialiste à un autre. Dire que le phénomène concerne 80% des chaussures de sport en circulation n’est pas exagéré.
+				</p>
+			</li>
+
+			<li>
+				<p>
+					Une chaussure de course est une chaussure de sport conçue pour la pratique de la course à pied.
+					            Elle peut être choisie en prenant en compte certains paramètres tels que le type de foulée du coureur (pronateur, supinateur ou universel),
+					            la morphologie de son pied, son poids, la surface sur laquelle il court (route bitumée ou chemin de terre),
+					            le niveau et l'intensité de la pratique (loisir ou compétition).
+				</p>
+			</li>
+		</ul>
+	</div>
+
+
+{% endblock %}
