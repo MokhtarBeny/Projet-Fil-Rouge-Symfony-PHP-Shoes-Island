@@ -1,3 +1,16 @@
+# Bienvenue sur mon Projet Shoes ISLAND
+
+
+C'est un site e-commerce de vente de Sneakers/Running que j'ai développé via le framework symfony qui se base sur un MVC (modèle/vue/ controller).
+
+## Vue de l'acceuil: 
+
+![Markdown Logo](https://www.zupimages.net/up/23/08/768z.png)
+
+
+
+
+
 # Dictionnaire de données - Projet Fil Rouge : Shoes Island
 
 > **PK= Primary KEY (clé primaire)**
