@@ -3,7 +3,7 @@
 
 C'est un site e-commerce de vente de Sneakers/Running que j'ai développé via le framework symfony qui se base sur un MVC (modèle/vue/ controller).
 
-## Vue de l'acceuil: 
+## Vue de l'accueil: 
 
 ![Markdown Logo](https://www.zupimages.net/up/23/08/768z.png)
 
@@ -101,6 +101,10 @@ C'est un site e-commerce de vente de Sneakers/Running que j'ai développé via l
 | CodePostal     | CodePostal       | Varchar(255)   |           |
 | Ville          | Ville            | Varchar(255)   |           |
 | Pays           | Pays             | Varchar(255)   |           |
+
+
+
+## livraison TODO
 
 
 # Gestion d'un Controller 
