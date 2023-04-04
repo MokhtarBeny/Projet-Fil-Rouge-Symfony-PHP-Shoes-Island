@@ -13,44 +13,35 @@
 		<div class="row">
 			<h1>Détails Produit
 			</h1>
-			<hr>
-			
+			<hr>			
 		</div>
-
 </div>
 	
-
-
-
-
 <div class="container">
-
-<div class="card mb-4">
-	<h3 class="card-header">{{ produit.Nom }}</h3>
-	<div class="card-body">
-		<h5 class="card-title">{{produit.Prix}}€</h5>
-		<h6 class="card-subtitle text-muted">Collection 2022-2023</h6>
-	</div class="col-12 border" >
-	<img src="/images/{{produit.Imgsrc}}" alt="categorie" class="img-fluid  imagescategories ">
-	<div class="card-body">
-		<p class="card-text">Voici le descriptif du produit, merci de cliquer ci-dessous afin de l'ajouter à votre panier.</p>
-		<a href="/add/{{ produit.id }}" class="btn btn-success">Ajouter au panier</a>
-        </a>
+	<div class="card mb-4">
+		<h3 class="card-header">{{ produit.Nom }}</h3>
+		<div class="card-body">
+			<h5 class="card-title">{{produit.Prix}}€</h5>
+			<h6 class="card-subtitle text-muted">Collection 2022-2023</h6>
+		</div class="col-12 border" >
+		<img src="/images/{{produit.Imgsrc}}" alt="categorie" class="img-fluid  imagescategories ">
+		<div class="card-body">
+			<p class="card-text">Voici le descriptif du produit, merci de cliquer ci-dessous afin de l'ajouter à votre panier.</p>
+			<a href="/add/{{ produit.id }}" class="btn btn-success">Ajouter au panier</a>
+			</a>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">{{produit.Description}}</li>
+			
+		</ul>
+		<div class="card-body">
+			<a href="#" class="card-link">Card link</a>
+			<a href="#" class="card-link">Another link</a>
+		</div>
+		<div class="card-footer text-muted">
+			2 days ago
+		</div>
 	</div>
-	<ul class="list-group list-group-flush">
-		<li class="list-group-item">{{produit.Description}}</li>
-		
-	</ul>
-	<div class="card-body">
-		<a href="#" class="card-link">Card link</a>
-		<a href="#" class="card-link">Another link</a>
-	</div>
-	<div class="card-footer text-muted">
-		2 days ago
-	</div>
-</div>
-
-
 </div>
 
 

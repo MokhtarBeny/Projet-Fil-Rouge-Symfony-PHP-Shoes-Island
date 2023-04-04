@@ -13,10 +13,6 @@ class CheckoutController extends AbstractController
     {
         // TODO
 
-
-
-
-
         return $this->render('checkout/livraison.html.twig', [
             'controller_name' => 'CheckoutController',
         ]);

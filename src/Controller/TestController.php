@@ -15,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class TestController extends AbstractController
 {
-       #[Route('/', name: 'accueil')]
+    #[Route('/', name: 'accueil')]
     public function cat( CategorieRepository $categorieRepository): Response
 
     {
@@ -23,18 +23,13 @@ class TestController extends AbstractController
         
         return $this->render('accueil/index.html.twig', [
 
-            "categories" => $categories          
-                  
-
+            "categories" => $categories  
         ]);
     }
-
-
     
     #[Route('/categorie/{categorie}', name: 'categorie')]
     public function categorie(Categorie $categorie): Response
-    {
-        
+    {       
 
         return $this->render('accueil/categorie.html.twig', [
             "categorie" => $categorie
@@ -43,23 +38,18 @@ class TestController extends AbstractController
 
     #[Route('/souscategorie/{souscategorie}', name: 'Produit')]
     public function produits(SousCategorie $souscategorie ): Response
-    {
-
-       
+    {       
         return $this->render('accueil/souscategorie.html.twig', [
-            "produits" => $souscategorie->getProduits()
-            
+            "produits" => $souscategorie->getProduits()            
         ]);
     }
 
      #[Route('/produit/{id}', name: 'produitdesc')]
     public function produit(ProduitRepository $produitRepository, int $id): Response
 
-    {
-        
+    {        
         return $this->render('produit/produit_desc.html.twig', [
-            'produit' => $produitRepository->find($id)
-            
+            'produit' => $produitRepository->find($id)            
         ]);
     }
     #[Route('/apropos', name: 'apropos')]
@@ -68,26 +58,5 @@ class TestController extends AbstractController
         return $this->render('accueil/apropos.html.twig', [
             
         ]);
+    }  
     }
-
-    
-    }
-
-
-    /*
-
-    #[Route('/apropos', name: 'apropos')]
-    public function apropos(): Response
-    {
-        return $this->render('accueil/apropos.html.twig', [
-            
-        ]);
-    }
-
-    #[Route('/apropos', name: 'apropos')]
-    public function apropos(): Response
-    {
-        return $this->render('accueil/apropos.html.twig', [
-            
-        ]);
-    } */

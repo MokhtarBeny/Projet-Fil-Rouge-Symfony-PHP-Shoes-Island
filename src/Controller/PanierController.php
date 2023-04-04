@@ -103,9 +103,7 @@ class PanierController extends AbstractController
             }
         }
         
-        if ($p==null) {  // le produit n'existe pas dans le panier
-
-            
+        if ($p==null) {  // le produit n'existe pas dans le panier            
             
         }
         else {
@@ -113,7 +111,6 @@ class PanierController extends AbstractController
             if($p->quantite == 0){
                 unset($panier[$position]);
             }
-
         }
         // sauvegarde dans la session
         $session->set("panier", $panier);
@@ -125,8 +122,7 @@ class PanierController extends AbstractController
     
     // #[IsGranted("ROLE_USER")]
     #[Route('/valid', name: 'app_valid')]
-    public function valid(ProduitRepository $repo, SessionInterface $session, EntityManagerInterface $manager): Response
-    
+    public function valid(ProduitRepository $repo, SessionInterface $session, EntityManagerInterface $manager): Response   
     
     
     {
@@ -146,7 +142,6 @@ class PanierController extends AbstractController
         $manager->persist($com);
 
         foreach ($panier as $produit) {
-
 
             $p = $repo->find($produit->getId());
             $qte = $produit->quantite;

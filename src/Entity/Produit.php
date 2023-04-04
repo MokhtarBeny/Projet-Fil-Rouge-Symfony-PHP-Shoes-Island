@@ -2,23 +2,29 @@
 
 namespace App\Entity;
 
-use App\Repository\ProduitRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use ApiPlatform\Metadata\ApiResource;
+use App\Repository\ProduitRepository;
+use Doctrine\Common\Collections\Collection;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: ProduitRepository::class)]
-#[ApiResource]
+#[ApiResource (
+    normalizationContext: [ "groups" => ["read:produit"]]
+)
+]
 class Produit
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(["read:produit"])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(["read:produit"])]
     private ?string $nom = null;
 
     #[ORM\Column(nullable: true)]
@@ -38,6 +44,7 @@ class Produit
     private ?SousCategorie $SousCategorie = null;
 
     #[ORM\Column(nullable: true)]
+    #[Groups(["read:produit"])]
     private ?float $Prix = null;
 
     #[ORM\Column(length: 255, nullable: true)]

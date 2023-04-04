@@ -26,50 +26,24 @@
         </li>
 
       {% endfor %}
-        {# <li class="nav-item">
-          <a class="nav-link" href="/categorie/1">Homme</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/categorie/2">Femme</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/categorie/3">Enfant</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/apropos">A propos</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/categorie/1">Homme</a>
-            <a class="dropdown-item" href="/categorie/2">Femme</a>
-            <a class="dropdown-item" href="/categorie/3">Enfant</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li> #}
+        
       </ul>
       <div >
-        <a href="/panier" class="panierinfo ">Panier >>  
-          
+        <a href="/panier" class="panierinfo ">Panier >>            
           {% set total = 0 %}
                             {% for item in panier %}
                                 {% set total = total + item.quantite %}
                             {% endfor %}
                             {{ total }}
-
-
           produit</a>
       </div>
-
       <div >      
         {% if app.user %}
           <a  class="navco" href="/logout"> se déconnecter</a>          
         {% else %}
           <a  class="navco" href="/login"> se connecter</a>          
         {% endif %}
-      </div>
-      
+      </div>      
       <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Search">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>

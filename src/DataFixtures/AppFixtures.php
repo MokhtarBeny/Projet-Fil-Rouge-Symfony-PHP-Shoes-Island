@@ -27,15 +27,15 @@ class AppFixtures extends Fixture
 
 
         $u1 = new User ();
-        $u1->setEmail("mokti@gmail.com");
+        $u1->setEmail("mokti@shoesisland.com");
         $u1->setRoles(["ROLE_USER"]);
-        $u1->setPassword($this->hasher->hashPassword($u1, "mokti"));
+        $u1->setPassword($this->hasher->hashPassword($u1, "password"));
         $manager->persist($u1);
 
         $u2 = new User ();
-        $u2->setEmail("admin@gmail.com");
+        $u2->setEmail("admin@shoesisland.com");
         $u2->setRoles(["ROLE_ADMIN"]);
-        $u2->setPassword($this->hasher->hashPassword($u2, "admin"));
+        $u2->setPassword($this->hasher->hashPassword($u2, "password"));
         $manager->persist($u2);
 
         $Categorie1 = new Categorie();
