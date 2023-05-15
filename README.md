@@ -18,7 +18,7 @@ C'est un site e-commerce de vente de Sneakers/Running que j'ai développé via l
 > **FK = Foreign KEY (clé étrangère)**
 
 
-![Markdown Logo](https://i.ibb.co/k5jWVcB/Screnn-Shot-Looping-MCD.png)
+![Markdown Logo](https://zupimages.net/up/23/20/yztg.png)
 
 
 
@@ -66,7 +66,7 @@ C'est un site e-commerce de vente de Sneakers/Running que j'ai développé via l
 | nom           | Nom             | Varchar(50)    |           |
 | StockPhysique | Stock Physique  | INT            |           |
 | Description   | Description     | Varchar(255)   |           |
-| Imgsrc        | Imgsrc          | Varchar(255)   |           |
+| Imagesrc        | Imgsrc          | Varchar(255)   |           |
 | Actif         | Actif           | Booleen        |           |
 | Prix          | Prix            | FLOAT          |           |
 
@@ -125,3 +125,7 @@ La seconde vue
 ``` #[Route(path: '/logout', name: 'app_logout')] ```
 
 permet de deconnecté l'utilisateur via la ``` public function logout() ````
+
+
+
+
