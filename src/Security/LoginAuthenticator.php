@@ -49,7 +49,7 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
         // For example:
         $roles = $token->getUser()->getRoles();
         if (in_array("ROLE_ADMIN" , $roles)) {
-            return new RedirectResponse($this->urlGenerator->generate('app_admin'));
+            return new RedirectResponse($this->urlGenerator->generate('admin'));
         }
         if (in_array("ROLE_USER" , $roles)) {
             return new RedirectResponse($this->urlGenerator->generate('accueil'));
