@@ -8,7 +8,9 @@ use App\Entity\Categorie;
 use App\Entity\SousCategorie;
 use App\Repository\ProduitRepository;
 use App\Repository\CategorieRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\SousCategorieRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -31,8 +33,11 @@ class TestController extends AbstractController
     public function categorie(Categorie $categorie): Response
     {       
 
+        
+
         return $this->render('accueil/categorie.html.twig', [
-            "categorie" => $categorie
+            'categorie' => $categorie
+            
         ]);
     }
 

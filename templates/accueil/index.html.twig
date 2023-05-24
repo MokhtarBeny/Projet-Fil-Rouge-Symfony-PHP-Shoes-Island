@@ -15,8 +15,9 @@
 			{% for cat in categories %}
 				<div class="col-4 border  mt-4">
 					<a href="{{ path("categorie",{categorie:cat.id})}}">
-						<center>{{ cat.CategorieNom }}
-						</center>
+						<h3>
+							<center>{{ cat.CategorieNom }}</center>
+						<h3>
 						<center><img src="/images/{{cat.imagesrc}}" alt="categorie" class="img-fluid w-100 imagescategories">
 						</center>
 						<div class="text-center">

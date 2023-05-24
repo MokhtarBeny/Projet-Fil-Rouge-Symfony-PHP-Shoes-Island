@@ -71,6 +71,11 @@
 
 } */
 
+.namecat{
+
+
+}
+
 .footer1{
     position: fixed ;
     bottom: 0px !important; 
@@ -96,15 +101,27 @@
 .panierinfo{
     color:bisque;
     margin-right: 20px !important;
+    
 }
 
-.body{
-    display: box;
+.panierinfo:hover{
+
+    font-size:x-large !important;
+    background-color: rgb(92, 129, 92) !important;
 }
 
 .navco{
     color:bisque;
     margin-right: 20px !important;
+}
+
+.navco:hover {
+    font-size:x-large !important;
+    background-color: rgb(92, 129, 92) !important;
+}
+
+.body{
+    display: box;
 }
 
 

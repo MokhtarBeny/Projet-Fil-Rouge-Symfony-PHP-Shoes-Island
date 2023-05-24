@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
+use App\Entity\Produit;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -11,7 +12,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
 class AdminDashboardController extends AbstractDashboardController
 {
-    #[Route('/admin', name: 'admin.index')]
+    #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
         
@@ -28,6 +29,8 @@ class AdminDashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-boot', User::class);
+        yield MenuItem::linkToCrud('Utilisateurs', 'fas  fa-user', User::class);
+        yield MenuItem::linkToCrud('Produits', 'fas   fa-cart-arrow-down  ', Produit::class);
+        
     }
 }
