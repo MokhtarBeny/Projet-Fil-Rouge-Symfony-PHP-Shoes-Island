@@ -1,0 +1,7 @@
+GET https://mokhtar.amorce.org/api/produits
+
+
+###
+
+GET  https://mokhtar.amorce.org/api/categories
+
