@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container mt-4 border border-dark">
+
+        <h1 class="mb-4">Mes Commandes</h1>
+
+        {% for commande in commandes %}
+            <div class="card border-dark border-thick mb-6">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Commande ID : {{ commande.id }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Date de Commande : {{ commande.dateCommande|date('d-m-Y H:i') }}</h6>
+                            <p class="card-text">Statut de la Commande : {{ commande.statutCommande }}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2">Détails de la Commande :</h6>
+                            {% set totalCommande = 0 %}
+                            {% for detailCommande in commande.detailCommandes %}
+                                <div>
+                                    <img src="{{ asset('images/' ~ detailCommande.produit.imgsrc) }}" alt="{{ detailCommande.produit.nom }}" width="100" height="100"> {# Ajouté #}
+                                    <p>Produit: {{ detailCommande.produit.nom }}</p>
+                                    <p>Quantité: {{ detailCommande.quantite }}</p>
+                                    <p>Prix unitaire : {{ detailCommande.produit.prix }}€</p> {# Ajouté #}
+                                    <p>Prix Total : {{ detailCommande.quantite * detailCommande.produit.prix }}€</p> {# Ajouté #}
+                                    {% set totalCommande = totalCommande + (detailCommande.quantite * detailCommande.produit.prix) %} 
+                                </div>
+                            {% endfor %}
+                            <p class="card-text">Total Commande : {{ totalCommande }}€</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -156,7 +156,7 @@ class PanierController extends AbstractController
 
         $session->set("panier", []);
         
-        return $this->redirect("/panier");
+        return $this->redirect("confirmation");
        
     }
 

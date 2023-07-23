@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Commande;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -37,6 +38,27 @@ class CommandeRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    public function findLatestOrderByUser(User $user): ?Commande
+    {
+        return $this->createQueryBuilder('c')
+            ->where('c.user = :user')
+            ->setParameter('user', $user)
+            ->orderBy('c.date_commande', 'DESC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+    
+    public function findByUser(User $user): array
+    {
+        return $this->createQueryBuilder('c')
+            ->where('c.user = :user')
+            ->setParameter('user', $user)
+            ->orderBy('c.date_commande', 'DESC')
+            ->getQuery()
+            ->getResult();
     }
 
 //    /**

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmation de Commande{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-primary text-white">Confirmation de Commande</div>
+        <div class="card-body">
+            <h4 class="card-title mb-4">Numéro de commande : {{ commande.id }}</h4>
+            <p><strong>Date de la commande :</strong> {{ commande.datecommande|date('d-m-Y H:i') }}</p>
+            <p><strong>Statut de la commande :</strong> {{ commande.statutcommande }}</p>
+
+            <h5 class="mt-4 mb-3">Détails de la commande :</h5>
+            {% for detailCommande in commande.detailCommandes %}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h6 class="card-title">Produit : {{ detailCommande.produit.nom }}</h6>
+                        <p><strong>Quantité :</strong> {{ detailCommande.quantite }}</p>
+                        <p><strong>Prix unitaire :</strong> {{ detailCommande.produit.Prix }} €</p>
+                        <p><strong>Total :</strong> {{ detailCommande.quantite * detailCommande.produit.Prix }} €</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <h5 class="mt-4">Total de la commande : {{ total }} €</h5>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-between">
+        <a href="{{ path('accueil') }}" class="btn btn-outline-primary">Continuer les achats</a>
+        <a href="{{ path('shipping_information') }}" class="btn btn-success">Finaliser la commande</a>
+    </div>
+</div>
+{% endblock %}

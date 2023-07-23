@@ -35,6 +35,23 @@ class Commande
     #[ORM\OneToMany(mappedBy: 'commande', targetEntity: DetailCommande::class)]
     private Collection $detailCommandes;
 
+    /**
+ * @ORM\Column(type="decimal", precision=10, scale=2)
+ */
+private $total;
+
+public function getTotal(): ?string
+{
+    return $this->total;
+}
+
+public function setTotal(string $total): self
+{
+    $this->total = $total;
+
+    return $this;
+}
+
     public function __construct()
     {
         $this->detailCommandes = new ArrayCollection();

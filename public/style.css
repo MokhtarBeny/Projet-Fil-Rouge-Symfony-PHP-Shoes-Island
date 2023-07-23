@@ -88,7 +88,7 @@
 }
 
 .prixproduit {
-    font-size: 40px;
+    font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;    
 }
 
@@ -101,13 +101,13 @@
 .panierinfo{
     color:bisque;
     margin-right: 20px !important;
-    
+    font-size: 20px !important;
 }
 
 .panierinfo:hover{
 
     font-size:x-large !important;
-    background-color: rgb(92, 129, 92) !important;
+    background-color: rgb(168, 168, 168) !important;
 }
 
 .navco{
@@ -117,7 +117,7 @@
 
 .navco:hover {
     font-size:x-large !important;
-    background-color: rgb(92, 129, 92) !important;
+    background-color: rgb(168, 168, 168) !important;
 }
 
 .body{
