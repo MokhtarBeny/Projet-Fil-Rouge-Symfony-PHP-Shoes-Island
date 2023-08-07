@@ -1,80 +1,8 @@
-/* 
-.titreAccueil{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 1EM;      
-    background-color:#F0EBCE
-} 
-
- .titre{
-    font-size: 60px;
-    font-stretch: extra-expanded;
-}
 
 
-
-.btn{
-    background-color: black;
-    margin-right: 5%;
-}
-
-
-}
-
-
-
-.container{
-    width: 100%;
-    max-width: 1000px;    
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-.buttonco{
-    --bs-btn-font-weight: 600 !important;
-    --bs-btn-color: var(--bs-white)!important;
-    --bs-btn-bg: var(--bd-violet)!important;
-    --bs-btn-border-color: var(--bd-violet)!important;
-    --bs-btn-border-radius: .5rem!important;
-    --bs-btn-hover-color: var(--bs-white)!important;  
-}
-
-.menusc{
-
-    border:solid;
-    border: 1rem solid;
-    border: thick double black;
-    border: 4mm ridge(black);
-}
-
-.shadowbox {
-    width: 15em;
-    border: 1px solid #333;
-    box-shadow: 8px 8px 5px #444;
-    padding: 8px 12px;
-    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
-}
-
-
-.imagescategories {
-
-    background-size: 200px 100px;
-} */
-
-/* .produithome {
-
-    magin-right: auto  !important;
-    margin-left: auto !important;
-
-} */
-
-.namecat{
-
-
-}
+.home-icon {
+    font-size: 30px !important;
+  }
 
 .footer1{
     position: fixed ;
@@ -150,5 +78,76 @@
 }
 
 
+/* 
+.titreAccueil{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 1EM;      
+    background-color:#F0EBCE
+} 
 
+ .titre{
+    font-size: 60px;
+    font-stretch: extra-expanded;
+}
+
+
+
+.btn{
+    background-color: black;
+    margin-right: 5%;
+}
+
+
+}
+
+
+
+.container{
+    width: 100%;
+    max-width: 1000px;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.buttonco{
+    --bs-btn-font-weight: 600 !important;
+    --bs-btn-color: var(--bs-white)!important;
+    --bs-btn-bg: var(--bd-violet)!important;
+    --bs-btn-border-color: var(--bd-violet)!important;
+    --bs-btn-border-radius: .5rem!important;
+    --bs-btn-hover-color: var(--bs-white)!important;  
+}
+
+.menusc{
+
+    border:solid;
+    border: 1rem solid;
+    border: thick double black;
+    border: 4mm ridge(black);
+}
+
+.shadowbox {
+    width: 15em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 8px 12px;
+    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+
+
+.imagescategories {
+
+    background-size: 200px 100px;
+} */
+
+/* .produithome {
+
+    magin-right: auto  !important;
+    margin-left: auto !important;
+
+} */
 
